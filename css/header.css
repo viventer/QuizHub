@@ -29,6 +29,7 @@
   max-width: 20rem;
   display: flex;
   align-items: center;
+  justify-content: left;
 }
 
 .search-bar {
@@ -44,7 +45,7 @@
 
 .search-bar:focus {
   outline: 0.13rem solid white;
-  width: 100%;
+  width: 60%;
 }
 
 .search-icon {
@@ -58,4 +59,26 @@
   .search-icon:hover {
     color: #e6eeec;
   }
+}
+
+.create-quiz-button {
+  /* background-color: rgba(0, 0, 0, 0); */
+  background-color: #94d2bd;
+  border: none;
+  border-radius: 2rem;
+  width: 1.6rem;
+  height: 1.6rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.icon-plus:before {
+  content: "\e801";
+  font-size: 1rem;
+  color: white;
+}
+
+.create-quiz-button:active {
+  background-color: #72d09b;
 }
