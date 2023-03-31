@@ -80,11 +80,7 @@
 .create-quiz-button {
   border-radius: 2rem;
   width: 1.6rem;
-  display: none;
-}
-
-.icon-plus:before {
-  content: "\e801";
+  /* display: none; */
 }
 
 .create-quiz-button:active {
@@ -99,4 +95,9 @@
   white-space: nowrap;
   padding: 0.8rem 0.6rem;
   height: 1.4rem;
+}
+
+.sign-in-button:active {
+  height: 1.7rem;
+  background-color: #b6e4df;
 }
