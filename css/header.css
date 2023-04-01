@@ -1,4 +1,4 @@
-.header {
+.main-header {
   background-color: #002433;
   position: fixed;
   top: 0;
@@ -89,15 +89,21 @@
   height: 1.8rem;
 }
 
+.create-quiz-button:active ~ .sign-in-button {
+  margin-left: -0.2rem;
+}
+
 .sign-in-button {
   font-weight: 700;
   border-radius: 1rem;
   white-space: nowrap;
-  padding: 0.8rem 0.6rem;
-  height: 1.4rem;
+  height: 1.6rem;
+  padding: 0 0.5rem;
 }
 
 .sign-in-button:active {
-  height: 1.7rem;
+  padding: 0 0.7rem;
+  height: 1.8rem;
   background-color: #b6e4df;
+  margin-left: -0.4rem;
 }

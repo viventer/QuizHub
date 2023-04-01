@@ -2,55 +2,61 @@
 <html lang="pl">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>QuizHub</title>
-    <link rel="stylesheet" href="css/main.css">
-    <link rel="stylesheet" href="css/header.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="fontello/css/fontello.css">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>QuizHub</title>
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/header.css">
+  <link rel="stylesheet" href="css/categories-nav.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="fontello/css/fontello.css">
 </head>
 
 <body>
-    <header class="header">
-        <div class="header-container flex-container">
-            <h1 class="text-logo">
-                <span class="blue">Q</span>uiz<span class="blue">H</span>ub
-            </h1>
-            <div class="search-bar-container">
-                <input type="text" class="search-bar">
-                <div class="search-icon-box">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50" fill="currentColor" class="search-icon">
-                        <g>
-                            <path
-                                d="M 21 3 C 11.601563 3 4 10.601563 4 20 C 4 29.398438 11.601563 37 21 37 C 24.355469 37 27.460938 36.015625 30.09375 34.34375 L 42.375 46.625 L 46.625 42.375 L 34.5 30.28125 C 36.679688 27.421875 38 23.878906 38 20 C 38 10.601563 30.398438 3 21 3 Z M 21 7 C 28.199219 7 34 12.800781 34 20 C 34 27.199219 28.199219 33 21 33 C 13.800781 33 8 27.199219 8 20 C 8 12.800781 13.800781 7 21 7 Z" />
-                        </g>
-                    </svg>
-                </div>
-            </div>
-            <button class="header-button create-quiz-button">
-                <i class="icon-plus"></i>
-            </button>
-            <button class="sign-in-button header-button">SIGN IN</button>
-
+  <header class="main-header">
+    <div class="header-container flex-container">
+      <h1 class="text-logo">
+        <span class="blue">Q</span>uiz<span class="blue">H</span>ub
+      </h1>
+      <div class="search-bar-container">
+        <input type="text" class="search-bar">
+        <div class="search-icon-box">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50" fill="currentColor" class="search-icon">
+            <g>
+              <path
+                d="M 21 3 C 11.601563 3 4 10.601563 4 20 C 4 29.398438 11.601563 37 21 37 C 24.355469 37 27.460938 36.015625 30.09375 34.34375 L 42.375 46.625 L 46.625 42.375 L 34.5 30.28125 C 36.679688 27.421875 38 23.878906 38 20 C 38 10.601563 30.398438 3 21 3 Z M 21 7 C 28.199219 7 34 12.800781 34 20 C 34 27.199219 28.199219 33 21 33 C 13.800781 33 8 27.199219 8 20 C 8 12.800781 13.800781 7 21 7 Z" />
+            </g>
+          </svg>
         </div>
-    </header>
-    <nav class="nav">
-        <i class="icon-equalizer"></i>
-        <ul>
-            <div class="nav-category">Geography</div>
-            <div class="nav-category">Sports</div>
-            <div class="nav-category">Science</div>
-            <div class="nav-category">History</div>
-            <div class="nav-category">History</div>
-        </ul>
-    </nav>
+      </div>
+      <button class="header-button create-quiz-button">
+        <i class="icon-plus"></i>
+      </button>
+      <button class="sign-in-button header-button">SIGN IN</button>
+
+    </div>
+  </header>
+  <nav class="categories-nav">
+    <div class="categories-nav-container">
+      <header class="categories-nav-header">
+        <i class="icon-equalizer"></i> CATEGORIES
+      </header>
+      <ul class="nav-category-list">
+        <div class="nav-category">All</div>
+        <div class="nav-category">Geography</div>
+        <div class="nav-category">Sports</div>
+        <div class="nav-category">Computer Science</div>
+        <div class="nav-category">Programming</div>
+        <div class="nav-category">General Knowledge</div>
+      </ul>
+    </div>
+  </nav>
 
 
-    <script src="js/main.js"></script>
+  <script src="js/main.js"></script>
 </body>
 
 </html>
