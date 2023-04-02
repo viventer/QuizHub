@@ -1,5 +1,7 @@
 .categories-nav {
-  background-color: #004866;
+  --blue: #004866;
+  --cream: #dfc67d;
+  background-color: var(--very-dark-blue);
 }
 
 .categories-nav-container {
@@ -12,7 +14,7 @@
 }
 
 .categories-nav-header {
-  border-bottom: 0.1rem solid #dfc67d;
+  border-bottom: 0.1rem solid var(--cream);
   width: fit-content;
   padding-bottom: 0.25rem;
   margin-bottom: 0.5rem;
@@ -21,15 +23,17 @@
 .nav-category-list {
   margin: 0;
   padding: 0;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, 8rem);
   column-gap: 0.5rem;
   white-space: nowrap;
+  display: flex;
+  overflow: hidden;
+  overflow-y: hidden;
 }
 
 .nav-category {
-  background-color: #dfc67d;
-  border-radius: 1rem;
+  background-color: var(--cream);
+  border-radius: 0.2rem;
   font-weight: 400;
   padding: 0.2rem 0.5rem;
+  font-weight: 500;
 }
