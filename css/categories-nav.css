@@ -1,7 +1,7 @@
 .categories-nav {
   --blue: #004866;
   --cream: #dfc67d;
-  background-color: var(--very-dark-blue);
+  background-color: var(--almost-black);
 }
 
 .categories-nav-container {
@@ -25,9 +25,14 @@
   padding: 0;
   column-gap: 0.5rem;
   white-space: nowrap;
+  position: relative;
+  height: 1.6rem;
+  overflow: auto;
   display: flex;
-  overflow: hidden;
-  overflow-y: hidden;
+}
+
+.nav-category-list::-webkit-scrollbar {
+  display: none;
 }
 
 .nav-category {
@@ -36,4 +41,5 @@
   font-weight: 400;
   padding: 0.2rem 0.5rem;
   font-weight: 500;
+  list-style: none;
 }

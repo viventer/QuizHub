@@ -2,3 +2,9 @@
 .icon-search:before { content: '\e800'; } /* '' */
 .icon-plus:before { content: '\e801'; } /* '' */
 .icon-user:before { content: '\e802'; } /* '' */
+.icon-globe:before { content: '\e803'; } /* '' */
+.icon-lightbulb:before { content: '\e805'; } /* '' */
+.icon-coffee:before { content: '\f0f4'; } /* '' */
+.icon-desktop:before { content: '\f108'; } /* '' */
+.icon-code:before { content: '\f121'; } /* '' */
+.icon-soccer-ball:before { content: '\f1e3'; } /* '' */

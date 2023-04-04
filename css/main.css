@@ -1,7 +1,7 @@
 /* colors */
 
 :root {
-  --very-dark-blue: #001219;
+  --almost-black: #1a1a1d;
   --blue: #005f73;
   --light-blue: #0a9396;
   --very-light-blue: #94d2bd;
@@ -14,7 +14,7 @@
 }
 
 body {
-  background-color: var(--very-dark-blue);
+  background-color: var(--almost-black);
   font-family: "Ubuntu", sans-serif;
   color: white;
   margin: 0;
