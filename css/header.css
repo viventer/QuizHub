@@ -1,5 +1,4 @@
 .main-header {
-  --very-dark-blue: #002433;
   background-color: var(--very-dark-blue);
   position: fixed;
   top: 0;
@@ -10,7 +9,7 @@
 }
 
 .header-container {
-  max-width: 90%;
+  max-width: 95%;
   margin-left: auto;
   margin-right: auto;
   padding: 0.7em;
@@ -42,8 +41,8 @@
   border-radius: 0.8rem;
   font-size: 1rem;
   padding: 0.2rem 0.7rem;
-  width: 1.2rem;
-  height: 1.2rem;
+  width: 2.1rem;
+  height: 1.6rem;
   font-weight: 700;
   color: #001219;
   transition: width 0s;
@@ -130,7 +129,7 @@
   }
 }
 
-@media (min-width: 305.1px) {
+@media (min-width: 315.1px) {
   .header-buttons-container {
     width: 10rem;
   }

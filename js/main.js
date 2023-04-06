@@ -19,7 +19,7 @@ searchIconBox.addEventListener("click", () => {
   searchBar.focus();
 });
 
-if (window.innerWidth < 305) {
+if (window.innerWidth < 315) {
   signInButton.innerHTML = '<i class="icon-user"></i>';
   signInButton.style.padding = "0 0.1rem";
 }
