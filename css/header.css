@@ -150,4 +150,7 @@
     border-radius: 1.2rem;
     font-size: 1.2rem;
   }
+  body {
+    padding-top: 4.5rem;
+  }
 }

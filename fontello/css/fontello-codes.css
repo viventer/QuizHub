@@ -6,5 +6,7 @@
 .icon-lightbulb:before { content: '\e805'; } /* '' */
 .icon-coffee:before { content: '\f0f4'; } /* '' */
 .icon-desktop:before { content: '\f108'; } /* '' */
+.icon-gamepad:before { content: '\f11b'; } /* '' */
 .icon-code:before { content: '\f121'; } /* '' */
+.icon-cab:before { content: '\f1b9'; } /* '' */
 .icon-soccer-ball:before { content: '\f1e3'; } /* '' */

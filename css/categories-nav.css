@@ -1,6 +1,7 @@
 .categories-nav {
   --blue: #004866;
   background-color: var(--almost-black);
+  scrollbar-color: rgba(255, 255, 255, 0.75) rgba(0, 0, 0, 0);
 }
 
 .categories-nav-container {
@@ -26,15 +27,9 @@
   column-gap: 0.5rem;
   white-space: nowrap;
   position: relative;
-  height: 1.6rem;
   overflow: auto;
   display: flex;
   padding-bottom: 0.5rem;
-  box-sizing: content-box;
-}
-
-.nav-category-list::-webkit-scrollbar {
-  display: none;
 }
 
 .nav-category {
@@ -46,8 +41,32 @@
   list-style: none;
 }
 
+.nav-category-list::-webkit-scrollbar {
+  height: 0.4rem;
+  margin-top: 50rem;
+}
+
+.nav-category-list::-webkit-scrollbar-thumb {
+  background-color: rgba(255, 255, 255, 0.3);
+  border-radius: 0.2rem;
+}
+
+.nav-category-list::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(255, 255, 255, 0.75);
+}
+
+.nav-category-list::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0);
+}
+
 @media (min-width: 700px) {
   .nav-category-list {
     margin-bottom: 0.7rem;
+  }
+}
+
+@media (hover: none) {
+  .nav-category-list::-webkit-scrollbar {
+    display: none;
   }
 }
