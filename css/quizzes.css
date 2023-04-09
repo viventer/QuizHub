@@ -1,12 +1,54 @@
 .quizzes-container {
   display: flex;
-  position: relative;
   align-items: center;
+  position: relative;
   justify-content: center;
   width: 90%;
   margin-left: auto;
   margin-right: auto;
   max-width: 1700px;
+}
+
+.left-quiz-button,
+.right-quiz-button {
+  --button-size: 2.8rem;
+  z-index: 200;
+  font-size: calc(var(--button-size) / 1.5);
+  font-family: "Font Awesome 5 Free";
+  font-weight: 700;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: calc(var(--button-size) / 2);
+  color: white;
+  position: absolute;
+  height: var(--button-size);
+  width: var(--button-size);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  top: calc(50% - 1.4rem);
+  transition: background-color 0.1s ease-in-out;
+}
+
+.left-quiz-button:active,
+.right-quiz-button:active {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.left-quiz-button {
+  left: calc(var(--button-size) / -2);
+}
+
+.right-quiz-button {
+  right: calc(var(--button-size) / -2);
+}
+
+.left-quiz-button::before {
+  content: "\f104";
+}
+
+.right-quiz-button::before {
+  content: "\f105";
 }
 
 .quiz {
@@ -83,6 +125,7 @@
   width: 75%;
   z-index: 100;
   box-shadow: 0px 0px 1rem 0px rgba(255, 255, 255, 0.2);
+  position: relative;
 }
 
 .left-quiz .quiz-title,
@@ -142,6 +185,10 @@
   }
   .quiz-title {
     font-size: 1.9rem;
+  }
+  .left-quiz-button,
+  .right-quiz-button {
+    --button-size: 3.5rem;
   }
 }
 

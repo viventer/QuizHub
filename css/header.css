@@ -6,6 +6,7 @@
   right: 0;
   border-bottom: 0.2rem solid var(--very-light-blue);
   width: 100%;
+  z-index: 300;
 }
 
 .header-container {
