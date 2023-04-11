@@ -197,3 +197,7 @@
     --thumbnail-height: 22vmin;
   }
 }
+
+.other-quiz {
+  display: none;
+}
