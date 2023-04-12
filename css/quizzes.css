@@ -92,6 +92,7 @@
   background-repeat: no-repeat;
   overflow: hidden;
   object-position: center;
+  background-color: black;
 }
 
 .quiz-description {
