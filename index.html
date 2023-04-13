@@ -2,178 +2,387 @@
 <html lang="pl">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>QuizHub</title>
-    <link rel="stylesheet" href="css/main.css">
-    <link rel="stylesheet" href="css/header.css">
-    <link rel="stylesheet" href="css/categories-nav.css">
-    <link rel="stylesheet" href="css/quizzes.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="fontello/css/fontello.css">
-    <script src="https://kit.fontawesome.com/d2f91379f9.js" crossorigin="anonymous"></script>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>QuizHub</title>
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/header.css">
+  <link rel="stylesheet" href="css/categories-nav.css">
+  <link rel="stylesheet" href="css/quizzes.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="fontello/css/fontello.css">
+  <script src="https://kit.fontawesome.com/d2f91379f9.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
-    <header class="main-header">
-        <div class="header-container flex-container">
-            <h1 class="text-logo">
-                <span class="blue">Q</span>uiz<span class="blue">H</span>ub
-            </h1>
-            <div class="search-bar-container">
-                <input type="text" class="search-bar">
-                <div class="search-icon-box">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50" fill="currentColor" class="search-icon">
-                        <g>
-                            <path
-                                d="M 21 3 C 11.601563 3 4 10.601563 4 20 C 4 29.398438 11.601563 37 21 37 C 24.355469 37 27.460938 36.015625 30.09375 34.34375 L 42.375 46.625 L 46.625 42.375 L 34.5 30.28125 C 36.679688 27.421875 38 23.878906 38 20 C 38 10.601563 30.398438 3 21 3 Z M 21 7 C 28.199219 7 34 12.800781 34 20 C 34 27.199219 28.199219 33 21 33 C 13.800781 33 8 27.199219 8 20 C 8 12.800781 13.800781 7 21 7 Z" />
-                        </g>
-                    </svg>
-                </div>
-            </div>
-            <div class="header-buttons-container flex-container">
-                <button class="header-button create-quiz-button">
-                    <i class="icon-plus"></i>
-                </button>
-                <button class="login-button header-button">LOGIN</button>
-            </div>
-
+  <header class="main-header">
+    <div class="header-container flex-container">
+      <h1 class="text-logo">
+        <span class="blue">Q</span>uiz<span class="blue">H</span>ub
+      </h1>
+      <div class="search-bar-container">
+        <input type="text" class="search-bar">
+        <div class="search-icon-box">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50" fill="currentColor" class="search-icon">
+            <g>
+              <path
+                d="M 21 3 C 11.601563 3 4 10.601563 4 20 C 4 29.398438 11.601563 37 21 37 C 24.355469 37 27.460938 36.015625 30.09375 34.34375 L 42.375 46.625 L 46.625 42.375 L 34.5 30.28125 C 36.679688 27.421875 38 23.878906 38 20 C 38 10.601563 30.398438 3 21 3 Z M 21 7 C 28.199219 7 34 12.800781 34 20 C 34 27.199219 28.199219 33 21 33 C 13.800781 33 8 27.199219 8 20 C 8 12.800781 13.800781 7 21 7 Z" />
+            </g>
+          </svg>
         </div>
-    </header>
-    <main class="main-content">
-        <section class="category-quizzes">
-            <nav class="categories-nav">
-                <div class="categories-nav-container">
-                    <header class="categories-nav-header">
-                        <h3>KATEGORIE</h3>
-                    </header>
-                    <ul class="nav-category-list">
-                        <li class="nav-category">
-                            <i class="icon-lightbulb"></i> Wszystkie
-                        </li>
-                        <li class="nav-category">
-                            <i class="icon-globe"></i> Geografia
-                        </li>
-                        <li class="nav-category">
-                            <i class="icon-soccer-ball"></i> Sport
-                        </li>
-                        <li class="nav-category">
-                            <i class="icon-desktop"></i> Informatyka
-                        </li>
-                        <li class="nav-category">
-                            <i class="icon-code"></i> Programowanie
-                        </li>
-                        <li class="nav-category">
-                            <i class="icon-coffee"></i> Wiedza ogólna
-                        </li>
-                        <li class="nav-category">
-                            <i class="icon-gamepad"></i> Gry
-                        </li>
-                    </ul>
-                </div>
-            </nav>
-            <div class="quizzes-container">
-                <article class="quiz geography other-quiz">
-                    <div class="quiz-content-container">
-                        <header class="quiz-header">
-                            <h2 class="quiz-title">Czy znasz stolice tych europejskich państw?</h2>
-                        </header>
-                        <div class="quiz-thumbnail-row">
-                            <img src="img/thumbnails/th-0.png" alt="" class="quiz-thumbnail">
-                        </div>
-                    </div>
-                </article>
-                <article class="quiz programming other-quiz">
-                    <div class="quiz-content-container">
-                        <header class="quiz-header">
-                            <h2 class="quiz-title">Test wiedzy o JavaScript</h2>
-                        </header>
-                        <div class="quiz-thumbnail-row">
-                            <img src="img/thumbnails/th-1.png" alt="" class="quiz-thumbnail">
-                        </div>
-                    </div>
-                </article>
-                <article class="quiz computer_science other-quiz">
-                    <div class="quiz-content-container">
-                        <header class="quiz-header">
-                            <h2 class="quiz-title">Sprawdź ile wiesz o sieciach komputerowych</h2>
-                        </header>
-                        <div class="quiz-thumbnail-row">
-                            <img src="img/thumbnails/th-2.png" alt="" class="quiz-thumbnail">
-                        </div>
-                    </div>
-                </article>
-                <article class="quiz general_knowladge other-quiz">
-                    <div class="quiz-content-container">
-                        <header class="quiz-header">
-                            <h2 class="quiz-title">Czy rozpoznasz loga znanych marek?</h2>
-                        </header>
-                        <div class="quiz-thumbnail-row">
-                            <img src="img/thumbnails/th-3.png" alt="" class="quiz-thumbnail">
-                        </div>
-                    </div>
-                </article>
-                <article class="quiz gaming other-quiz">
-                    <div class="quiz-content-container">
-                        <header class="quiz-header">
-                            <h2 class="quiz-title">Czy znałeś te ciekawostki o Minecraft?</h2>
-                        </header>
-                        <div class="quiz-thumbnail-row">
-                            <img src="img/thumbnails/th-4.png" alt="" class="quiz-thumbnail">
-                        </div>
-                    </div>
-                </article>
-                <article class="quiz sport other-quiz">
-                    <div class="quiz-content-container">
-                        <header class="quiz-header">
-                            <h2 class="quiz-title">Sprawdź jak dobrze znasz F1</h2>
-                        </header>
-                        <div class="quiz-thumbnail-row">
-                            <img src="img/thumbnails/th-5.png" alt="" class="quiz-thumbnail">
-                        </div>
-                    </div>
-                </article>
-                <article class="quiz geography other-quiz">
-                    <div class="quiz-content-container">
-                        <header class="quiz-header">
-                            <h2 class="quiz-title">Test wiedzy o flagach świata</h2>
-                        </header>
-                        <div class="quiz-thumbnail-row">
-                            <img src="img/thumbnails/th-6.png" alt="" class="quiz-thumbnail">
-                        </div>
-                    </div>
-                </article>
-                <article class="quiz programming other-quiz">
-                    <div class="quiz-content-container">
-                        <header class="quiz-header">
-                            <h2 class="quiz-title">Jak dobrze znasz język python?</h2>
-                        </header>
-                        <div class="quiz-thumbnail-row">
-                            <img src="img/thumbnails/th-7.png" alt="" class="quiz-thumbnail">
-                        </div>
-                    </div>
-                </article>
-                <article class="quiz computer_science other-quiz">
-                    <div class="quiz-content-container">
-                        <header class="quiz-header">
-                            <h2 class="quiz-title">Quiz z Linuxa</h2>
-                        </header>
-                        <div class="quiz-thumbnail-row">
-                            <img src="img/thumbnails/th-8.png" alt="" class="quiz-thumbnail">
-                        </div>
-                    </div>
-                </article>
+      </div>
+      <div class="header-buttons-container flex-container">
+        <button class="header-button create-quiz-button">
+          <i class="icon-plus"></i>
+        </button>
+        <button class="login-button header-button">LOGIN</button>
+      </div>
+
+    </div>
+  </header>
+  <main class="main-content">
+    <section class="category-quizzes">
+      <nav class="categories-nav">
+        <div class="categories-nav-container">
+          <header class="categories-nav-header">
+            <h3>KATEGORIE</h3>
+          </header>
+          <ul class="nav-category-list">
+            <li class="nav-category">
+              <button class="nav-category-button">
+                <i class="icon-lightbulb"></i> Wszystkie
+              </button>
+            </li>
+            <li class="nav-category">
+              <button class="nav-category-button">
+                <i class="icon-globe"></i> Geografia
+              </button>
+            </li>
+            <li class="nav-category">
+              <button class="nav-category-button">
+                <i class="icon-soccer-ball"></i> Sport
+              </button>
+            </li>
+            <li class="nav-category">
+              <button class="nav-category-button">
+                <i class="icon-desktop"></i> Informatyka
+              </button>
+            </li>
+            <li class="nav-category">
+              <button class="nav-category-button">
+                <i class="icon-code"></i> Programowanie
+              </button>
+            </li>
+            <li class="nav-category">
+              <button class="nav-category-button">
+                <i class="icon-gamepad"></i> Gry
+              </button>
+            </li>
+          </ul>
+        </div>
+      </nav>
+      <div class="quizzes-container">
+        <article class="quiz geography other-quiz">
+          <div class="quiz-content-container">
+            <header class="quiz-header">
+              <h2 class="quiz-title">Czy znasz stolice tych europejskich państw?</h2>
+            </header>
+            <div class="quiz-thumbnail-row">
+              <img src="img/thumbnails/th-0.png" alt="" class="quiz-thumbnail">
             </div>
-        </section>
-    </main>
+          </div>
+        </article>
+        <article class="quiz programming other-quiz">
+          <div class="quiz-content-container">
+            <header class="quiz-header">
+              <h2 class="quiz-title">Test wiedzy o JavaScript</h2>
+            </header>
+            <div class="quiz-thumbnail-row">
+              <img src="img/thumbnails/th-1.png" alt="" class="quiz-thumbnail">
+            </div>
+          </div>
+        </article>
+        <article class="quiz computer_science other-quiz">
+          <div class="quiz-content-container">
+            <header class="quiz-header">
+              <h2 class="quiz-title">Sprawdź ile wiesz o sieciach komputerowych</h2>
+            </header>
+            <div class="quiz-thumbnail-row">
+              <img src="img/thumbnails/th-2.png" alt="" class="quiz-thumbnail">
+            </div>
+          </div>
+        </article>
+        <article class="quiz geography other-quiz">
+          <div class="quiz-content-container">
+            <header class="quiz-header">
+              <h2 class="quiz-title">Czy wiesz gdzie znajduję się to miejsce?</h2>
+            </header>
+            <div class="quiz-thumbnail-row">
+              <img src="img/thumbnails/th-3.png" alt="" class="quiz-thumbnail">
+            </div>
+          </div>
+        </article>
+        <article class="quiz gaming other-quiz">
+          <div class="quiz-content-container">
+            <header class="quiz-header">
+              <h2 class="quiz-title">Czy znałeś te ciekawostki o Minecraft?</h2>
+            </header>
+            <div class="quiz-thumbnail-row">
+              <img src="img/thumbnails/th-4.png" alt="" class="quiz-thumbnail">
+            </div>
+          </div>
+        </article>
+        <article class="quiz sport other-quiz">
+          <div class="quiz-content-container">
+            <header class="quiz-header">
+              <h2 class="quiz-title">Sprawdź jak dobrze znasz F1</h2>
+            </header>
+            <div class="quiz-thumbnail-row">
+              <img src="img/thumbnails/th-5.png" alt="" class="quiz-thumbnail">
+            </div>
+          </div>
+        </article>
+        <article class="quiz geography other-quiz">
+          <div class="quiz-content-container">
+            <header class="quiz-header">
+              <h2 class="quiz-title">Test wiedzy o flagach świata</h2>
+            </header>
+            <div class="quiz-thumbnail-row">
+              <img src="img/thumbnails/th-6.png" alt="" class="quiz-thumbnail">
+            </div>
+          </div>
+        </article>
+        <article class="quiz programming other-quiz">
+          <div class="quiz-content-container">
+            <header class="quiz-header">
+              <h2 class="quiz-title">Jak dobrze znasz język python?</h2>
+            </header>
+            <div class="quiz-thumbnail-row">
+              <img src="img/thumbnails/th-7.png" alt="" class="quiz-thumbnail">
+            </div>
+          </div>
+        </article>
+        <article class="quiz computer_science other-quiz">
+          <div class="quiz-content-container">
+            <header class="quiz-header">
+              <h2 class="quiz-title">Quiz z Linuxa</h2>
+            </header>
+            <div class="quiz-thumbnail-row">
+              <img src="img/thumbnails/th-8.png" alt="" class="quiz-thumbnail">
+            </div>
+          </div>
+        </article>
+        <article class="quiz geography other-quiz">
+          <div class="quiz-content-container">
+            <header class="quiz-header">
+              <h2 class="quiz-title">Jak dobrze znasz geografię Polski?</h2>
+            </header>
+            <div class="quiz-thumbnail-row">
+              <img src="img/thumbnails/th-9.png" alt="" class="quiz-thumbnail">
+            </div>
+          </div>
+        </article>
+        <article class="quiz geography other-quiz">
+          <div class="quiz-content-container">
+            <header class="quiz-header">
+              <h2 class="quiz-title">Czy rozpoznasz państwo po zdjęciu?</h2>
+            </header>
+            <div class="quiz-thumbnail-row">
+              <img src="img/thumbnails/th-10.png" alt="" class="quiz-thumbnail">
+            </div>
+          </div>
+        </article>
+        <article class="quiz geography other-quiz">
+          <div class="quiz-content-container">
+            <header class="quiz-header">
+              <h2 class="quiz-title">Czy znasz te jeziora, oceany i rzeki?</h2>
+            </header>
+            <div class="quiz-thumbnail-row">
+              <img src="img/thumbnails/th-11.png" alt="" class="quiz-thumbnail">
+            </div>
+          </div>
+        </article>
+        <article class="quiz geography other-quiz">
+          <div class="quiz-content-container">
+            <header class="quiz-header">
+              <h2 class="quiz-title">Rozpoznaj państwo po kształcie</h2>
+            </header>
+            <div class="quiz-thumbnail-row">
+              <img src="img/thumbnails/th-12.png" alt="" class="quiz-thumbnail">
+            </div>
+          </div>
+        </article>
+        <article class="quiz geography other-quiz">
+          <div class="quiz-content-container">
+            <header class="quiz-header">
+              <h2 class="quiz-title">Czy rozpoznasz znane miasta po zdjęciu?</h2>
+            </header>
+            <div class="quiz-thumbnail-row">
+              <img src="img/thumbnails/th-13.png" alt="" class="quiz-thumbnail">
+            </div>
+          </div>
+        </article>
+        <article class="quiz sport other-quiz">
+          <div class="quiz-content-container">
+            <header class="quiz-header">
+              <h2 class="quiz-title">Test wiedzy o piłce nożnej</h2>
+            </header>
+            <div class="quiz-thumbnail-row">
+              <img src="img/thumbnails/th-14.png" alt="" class="quiz-thumbnail">
+            </div>
+          </div>
+        </article>
+        <article class="quiz sport other-quiz">
+          <div class="quiz-content-container">
+            <header class="quiz-header">
+              <h2 class="quiz-title">Czy znasz te sportowe ciekawostki?</h2>
+            </header>
+            <div class="quiz-thumbnail-row">
+              <img src="img/thumbnails/th-15.png" alt="" class="quiz-thumbnail">
+            </div>
+          </div>
+        </article>
+        <article class="quiz sport other-quiz">
+          <div class="quiz-content-container">
+            <header class="quiz-header">
+              <h2 class="quiz-title">Jak dobrze znasz historię F1?</h2>
+            </header>
+            <div class="quiz-thumbnail-row">
+              <img src="img/thumbnails/th-16.png" alt="" class="quiz-thumbnail">
+            </div>
+          </div>
+        </article>
+        <article class="quiz sport other-quiz">
+          <div class="quiz-content-container">
+            <header class="quiz-header">
+              <h2 class="quiz-title">Quiz o najważniejszych sportowych wydarzeniach</h2>
+            </header>
+            <div class="quiz-thumbnail-row">
+              <img src="img/thumbnails/th-17.png" alt="" class="quiz-thumbnail">
+            </div>
+          </div>
+        </article>
+        <article class="quiz computer_science other-quiz">
+          <div class="quiz-content-container">
+            <header class="quiz-header">
+              <h2 class="quiz-title">Jak dobrze znasz historię komputerów?</h2>
+            </header>
+            <div class="quiz-thumbnail-row">
+              <img src="img/thumbnails/th-18.png" alt="" class="quiz-thumbnail">
+            </div>
+          </div>
+        </article>
+        <article class="quiz computer_science other-quiz">
+          <div class="quiz-content-container">
+            <header class="quiz-header">
+              <h2 class="quiz-title">Ile wiesz o windowsie?</h2>
+            </header>
+            <div class="quiz-thumbnail-row">
+              <img src="img/thumbnails/th-19.png" alt="" class="quiz-thumbnail">
+            </div>
+          </div>
+        </article>
+        <article class="quiz computer_science other-quiz">
+          <div class="quiz-content-container">
+            <header class="quiz-header">
+              <h2 class="quiz-title">Czy rozpoznasz sprzęt komputerowy po zdjęciu?</h2>
+            </header>
+            <div class="quiz-thumbnail-row">
+              <img src="img/thumbnails/th-20.png" alt="" class="quiz-thumbnail">
+            </div>
+          </div>
+        </article>
+        <article class="quiz computer_science other-quiz">
+          <div class="quiz-content-container">
+            <header class="quiz-header">
+              <h2 class="quiz-title">Jak dobrze znasz linuxowe komendy?</h2>
+            </header>
+            <div class="quiz-thumbnail-row">
+              <img src="img/thumbnails/th-21.png" alt="" class="quiz-thumbnail">
+            </div>
+          </div>
+        </article>
+        <article class="quiz programming other-quiz">
+          <div class="quiz-content-container">
+            <header class="quiz-header">
+              <h2 class="quiz-title">Test wiedzy o C++</h2>
+            </header>
+            <div class="quiz-thumbnail-row">
+              <img src="img/thumbnails/th-22.png" alt="" class="quiz-thumbnail">
+            </div>
+          </div>
+        </article>
+        <article class="quiz programming other-quiz">
+          <div class="quiz-content-container">
+            <header class="quiz-header">
+              <h2 class="quiz-title">Czy potrafisz przewidzieć działanie kodu w Pythonie?</h2>
+            </header>
+            <div class="quiz-thumbnail-row">
+              <img src="img/thumbnails/th-23.png" alt="" class="quiz-thumbnail">
+            </div>
+          </div>
+        </article>
+        <article class="quiz programming other-quiz">
+          <div class="quiz-content-container">
+            <header class="quiz-header">
+              <h2 class="quiz-title">Sprawdź ile wiesz o bazach danych</h2>
+            </header>
+            <div class="quiz-thumbnail-row">
+              <img src="img/thumbnails/th-24.png" alt="" class="quiz-thumbnail">
+            </div>
+          </div>
+        </article>
+        <article class="quiz games other-quiz">
+          <div class="quiz-content-container">
+            <header class="quiz-header">
+              <h2 class="quiz-title">Sprawdź swoją wiedzę o historii gamingu</h2>
+            </header>
+            <div class="quiz-thumbnail-row">
+              <img src="img/thumbnails/th-25.png" alt="" class="quiz-thumbnail">
+            </div>
+          </div>
+        </article>
+        <article class="quiz games other-quiz">
+          <div class="quiz-content-container">
+            <header class="quiz-header">
+              <h2 class="quiz-title">Czy rozpoznasz z jakiego roku pochodzi ta gra?</h2>
+            </header>
+            <div class="quiz-thumbnail-row">
+              <img src="img/thumbnails/th-26.png" alt="" class="quiz-thumbnail">
+            </div>
+          </div>
+        </article>
+        <article class="quiz games other-quiz">
+          <div class="quiz-content-container">
+            <header class="quiz-header">
+              <h2 class="quiz-title">Test wiedzy o serii gier FIFA</h2>
+            </header>
+            <div class="quiz-thumbnail-row">
+              <img src="img/thumbnails/th-27.png" alt="" class="quiz-thumbnail">
+            </div>
+          </div>
+        </article>
+        <article class="quiz games other-quiz">
+          <div class="quiz-content-container">
+            <header class="quiz-header">
+              <h2 class="quiz-title">Zgadnij z jakiej gry pochodzi ten screen</h2>
+            </header>
+            <div class="quiz-thumbnail-row">
+              <img src="img/thumbnails/th-28.png" alt="" class="quiz-thumbnail">
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+  </main>
 
 
 
-    <script src="js/main.js"></script>
-    <script src="js/quizzes-slider.js" defer></script>
+  <script src="js/main.js"></script>
+  <script src="js/quizzes-slider.js" defer></script>
 </body>
 
 </html>

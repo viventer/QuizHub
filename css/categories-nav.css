@@ -33,12 +33,25 @@
 }
 
 .nav-category {
-  background-color: var(--dark-cream);
-  border-radius: 0.2rem;
-  font-weight: 400;
-  padding: 0.2rem 0.5rem;
-  font-weight: 500;
   list-style: none;
+}
+
+.nav-category-button {
+  font-family: Ubuntu;
+  background-color: var(--dark-cream);
+  border: 0;
+  color: white;
+  font-size: 1rem;
+  font-weight: 700;
+  padding: 0.2rem 0.5rem;
+  border-radius: 0.2rem;
+}
+
+.nav-category-button.active {
+  box-sizing: border-box;
+  --dark-cream: #d5b454;
+  background-color: var(--dark-cream);
+  border-bottom: 2px solid white;
 }
 
 .nav-category-list::-webkit-scrollbar {

@@ -1,4 +1,36 @@
-const quizzes = document.querySelectorAll(".quiz");
+let quizzes = document.querySelectorAll(".quiz");
+const categoryButtons = document.querySelectorAll(".nav-category-button");
+let category = "all";
+let categories = {
+  wszystkie: "all",
+  geografia: "geography",
+  sport: "sport",
+  informatyka: "computer_science",
+  programowanie: "programming",
+  gry: "games",
+};
+let filteredQuizzes = [];
+
+categoryButtons.forEach((button) =>
+  button.addEventListener("click", setCategory)
+);
+
+// nie działa jeszcze
+function setCategory() {
+  categoryButtons.forEach((button) => {
+    button.classList.remove("active");
+  });
+  this.classList.add("active");
+  category = this.textContent;
+  category = category.trim().toLowerCase();
+  category = categories[category];
+  quizzes.forEach((quiz) => {
+    if (quiz.classList.contains(category)) {
+      filteredQuizzes.push(quiz);
+    }
+  });
+}
+
 let mainIndex = 1;
 let previousMainIndex = 2;
 let leftButton;
@@ -20,7 +52,7 @@ function sliderShift() {
   if (mainIndex == -1) {
     mainIndex = quizzes.length - 1;
   }
-  if (mainIndex == 9) {
+  if (mainIndex == quizzes.length) {
     mainIndex = 0;
   }
   rightIndex = mainIndex + 1;
@@ -43,8 +75,6 @@ function sliderShift() {
     rightIndex = 0;
     secondRightIndex = 1;
   }
-
-  console.log(mainIndex);
 
   quizzes[secondLeftIndex].classList.remove("other-quiz");
   quizzes[leftIndex].classList.remove("other-quiz");
