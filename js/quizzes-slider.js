@@ -10,12 +10,33 @@ let categories = {
   gry: "games",
 };
 let filteredQuizzes = [];
+let oldQuizzes = quizzes;
+let intervalId;
 
 categoryButtons.forEach((button) =>
   button.addEventListener("click", setCategory)
 );
 
-// nie działa jeszcze
+let leftButton = document.createElement("button");
+leftButton.classList.add("left-quiz-button");
+let rightButton = document.createElement("button");
+rightButton.classList.add("right-quiz-button");
+
+leftButton.addEventListener("click", () => {
+  forward = false;
+  clearEarlier();
+  sliderShift();
+  clearInterval(intervalId);
+  intervalId = setInterval(() => rightButton.click(), 4000);
+});
+rightButton.addEventListener("click", () => {
+  forward = true;
+  clearEarlier();
+  sliderShift();
+  clearInterval(intervalId);
+  intervalId = setInterval(() => rightButton.click(), 4000);
+});
+
 function setCategory() {
   filteredQuizzes = [];
   categoryButtons.forEach((button) => {
@@ -25,30 +46,29 @@ function setCategory() {
   category = this.textContent;
   category = category.trim().toLowerCase();
   category = categories[category];
-  quizzes.forEach((quiz) => {
+  oldQuizzes.forEach((quiz) => {
     if (category != "all") {
       if (quiz.classList.contains(category)) {
         filteredQuizzes.push(quiz);
       }
     } else {
-      filteredQuizzes = quizzes;
+      filteredQuizzes.push(quiz);
     }
   });
   quizzes = filteredQuizzes;
+  mainIndex = 2;
+  rightButton.click();
 }
 
 let mainIndex = 1;
-let previousMainIndex = 2;
-let leftButton;
-let rightButton;
 let forward = true;
 let rightIndex;
 let secondRightIndex;
 let leftIndex;
 let secondLeftIndex;
 
-categoryButtons[0].click();
 sliderShift();
+categoryButtons[0].click();
 
 function sliderShift() {
   if (forward == true) {
@@ -75,12 +95,11 @@ function sliderShift() {
     leftIndex = quizzes.length - 1;
   }
 
-  if (mainIndex == quizzes.length - 2) {
-    secondRightIndex = 0;
-  }
-  if (mainIndex == quizzes.length - 1) {
+  if (mainIndex >= quizzes.length - 1) {
     rightIndex = 0;
     secondRightIndex = 1;
+  } else if (mainIndex >= quizzes.length - 2) {
+    secondRightIndex = 0;
   }
 
   quizzes[secondLeftIndex].classList.remove("other-quiz");
@@ -95,49 +114,21 @@ function sliderShift() {
   quizzes[rightIndex].classList.add("right-quiz");
   quizzes[secondRightIndex].classList.add("second-right-quiz");
 
-  leftButton = document.createElement("button");
-  leftButton.classList.add("left-quiz-button");
-  rightButton = document.createElement("button");
-  rightButton.classList.add("right-quiz-button");
-
   quizzes[mainIndex].appendChild(leftButton);
   quizzes[mainIndex].appendChild(rightButton);
-
-  leftButton.addEventListener("click", () => {
-    forward = false;
-    previousMainIndex = mainIndex;
-    clearEarlier();
-    sliderShift();
-  });
-  rightButton.addEventListener("click", () => {
-    forward = true;
-    previousMainIndex = mainIndex;
-    clearEarlier();
-    sliderShift();
-  });
 }
 
 function clearEarlier() {
-  quizzes.forEach((quiz) => {
+  oldQuizzes.forEach((quiz) => {
     quiz.classList.add("other-quiz");
     quiz.classList.remove("second-left-quiz");
     quiz.classList.remove("left-quiz");
     quiz.classList.remove("right-quiz");
     quiz.classList.remove("second-right-quiz");
     quiz.classList.remove("main-quiz");
+    try {
+      quiz.removeChild(leftButton);
+      quiz.removeChild(rightButton);
+    } catch (error) {}
   });
-  // quizzes[secondLeftIndex].classList.add("other-quiz");
-  // quizzes[leftIndex].classList.add("other-quiz");
-  // quizzes[mainIndex].classList.add("other-quiz");
-  // quizzes[rightIndex].classList.add("other-quiz");
-  // quizzes[secondRightIndex].classList.add("other-quiz");
-
-  // quizzes[secondLeftIndex].classList.remove("second-left-quiz");
-  // quizzes[leftIndex].classList.remove("left-quiz");
-  // quizzes[mainIndex].classList.remove("main-quiz");
-  // quizzes[rightIndex].classList.remove("right-quiz");
-  // quizzes[secondRightIndex].classList.remove("second-right-quiz");
-
-  // quizzes[mainIndex].removeChild(leftButton);
-  // quizzes[mainIndex].removeChild(rightButton);
 }
