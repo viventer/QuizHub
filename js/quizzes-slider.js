@@ -17,6 +17,7 @@ categoryButtons.forEach((button) =>
 
 // nie działa jeszcze
 function setCategory() {
+  filteredQuizzes = [];
   categoryButtons.forEach((button) => {
     button.classList.remove("active");
   });
@@ -25,10 +26,15 @@ function setCategory() {
   category = category.trim().toLowerCase();
   category = categories[category];
   quizzes.forEach((quiz) => {
-    if (quiz.classList.contains(category)) {
-      filteredQuizzes.push(quiz);
+    if (category != "all") {
+      if (quiz.classList.contains(category)) {
+        filteredQuizzes.push(quiz);
+      }
+    } else {
+      filteredQuizzes = quizzes;
     }
   });
+  quizzes = filteredQuizzes;
 }
 
 let mainIndex = 1;
@@ -41,6 +47,7 @@ let secondRightIndex;
 let leftIndex;
 let secondLeftIndex;
 
+categoryButtons[0].click();
 sliderShift();
 
 function sliderShift() {
@@ -111,18 +118,26 @@ function sliderShift() {
 }
 
 function clearEarlier() {
-  quizzes[secondLeftIndex].classList.add("other-quiz");
-  quizzes[leftIndex].classList.add("other-quiz");
-  quizzes[mainIndex].classList.add("other-quiz");
-  quizzes[rightIndex].classList.add("other-quiz");
-  quizzes[secondRightIndex].classList.add("other-quiz");
+  quizzes.forEach((quiz) => {
+    quiz.classList.add("other-quiz");
+    quiz.classList.remove("second-left-quiz");
+    quiz.classList.remove("left-quiz");
+    quiz.classList.remove("right-quiz");
+    quiz.classList.remove("second-right-quiz");
+    quiz.classList.remove("main-quiz");
+  });
+  // quizzes[secondLeftIndex].classList.add("other-quiz");
+  // quizzes[leftIndex].classList.add("other-quiz");
+  // quizzes[mainIndex].classList.add("other-quiz");
+  // quizzes[rightIndex].classList.add("other-quiz");
+  // quizzes[secondRightIndex].classList.add("other-quiz");
 
-  quizzes[secondLeftIndex].classList.remove("second-left-quiz");
-  quizzes[leftIndex].classList.remove("left-quiz");
-  quizzes[mainIndex].classList.remove("main-quiz");
-  quizzes[rightIndex].classList.remove("right-quiz");
-  quizzes[secondRightIndex].classList.remove("second-right-quiz");
+  // quizzes[secondLeftIndex].classList.remove("second-left-quiz");
+  // quizzes[leftIndex].classList.remove("left-quiz");
+  // quizzes[mainIndex].classList.remove("main-quiz");
+  // quizzes[rightIndex].classList.remove("right-quiz");
+  // quizzes[secondRightIndex].classList.remove("second-right-quiz");
 
-  quizzes[mainIndex].removeChild(leftButton);
-  quizzes[mainIndex].removeChild(rightButton);
+  // quizzes[mainIndex].removeChild(leftButton);
+  // quizzes[mainIndex].removeChild(rightButton);
 }
