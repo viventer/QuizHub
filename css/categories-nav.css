@@ -4,23 +4,6 @@
   scrollbar-color: rgba(255, 255, 255, 0.75) rgba(0, 0, 0, 0);
 }
 
-.categories-nav-container {
-  width: 90%;
-  margin-left: auto;
-  margin-right: auto;
-  padding-top: 0.5rem;
-  padding-bottom: 0.5rem;
-  font-weight: 700;
-}
-
-.categories-nav-header {
-  border-bottom: 0.1rem solid var(--dark-cream);
-  width: fit-content;
-  padding-bottom: 0.25rem;
-  margin-bottom: 0.5rem;
-  font-size: 0.9rem;
-}
-
 .nav-category-list {
   margin: 0;
   padding: 0;
@@ -45,6 +28,7 @@
   font-weight: 700;
   padding: 0.2rem 0.5rem;
   border-radius: 0.2rem;
+  cursor: pointer;
 }
 
 .nav-category-button.active {

@@ -13,6 +13,12 @@ let filteredQuizzes = [];
 let oldQuizzes = quizzes;
 let intervalId;
 let isCategorySwitching;
+let mainIndex = 1;
+let forward = true;
+let rightIndex;
+let secondRightIndex;
+let leftIndex;
+let secondLeftIndex;
 
 categoryButtons.forEach((button) =>
   button.addEventListener("click", setCategory)
@@ -25,14 +31,12 @@ rightButton.classList.add("right-quiz-button");
 
 leftButton.addEventListener("click", () => {
   forward = false;
-  clearEarlier();
   sliderShift();
   clearInterval(intervalId);
   intervalId = setInterval(() => rightButton.click(), 4500);
 });
 rightButton.addEventListener("click", () => {
   forward = true;
-  clearEarlier();
   sliderShift();
   clearInterval(intervalId);
   intervalId = setInterval(() => rightButton.click(), 4500);
@@ -62,17 +66,10 @@ function setCategory() {
   rightButton.click();
 }
 
-let mainIndex = 1;
-let forward = true;
-let rightIndex;
-let secondRightIndex;
-let leftIndex;
-let secondLeftIndex;
-
-sliderShift();
 categoryButtons[0].click();
 
 function sliderShift() {
+  clearEarlier();
   if (forward == true) {
     mainIndex += 1;
   } else {
@@ -135,8 +132,8 @@ function sliderShift() {
   quizzes[rightIndex].classList.add("right-quiz");
   quizzes[secondRightIndex].classList.add("second-right-quiz");
 
-  quizzes[mainIndex].appendChild(leftButton);
   quizzes[mainIndex].appendChild(rightButton);
+  quizzes[mainIndex].appendChild(leftButton);
 
   isCategorySwitching = false;
 }
