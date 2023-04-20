@@ -1,4 +1,4 @@
-let quizzes = document.querySelectorAll(".quiz");
+let quizzes = document.querySelectorAll(".category-quiz");
 const categoryButtons = document.querySelectorAll(".nav-category-button");
 let category = "all";
 let categories = {
