@@ -1,6 +1,7 @@
 .quizzes-container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(15rem, 25rem));
+  grid-template-columns: repeat(auto-fit, minmax(10rem, 25rem));
+  gap: 1rem;
 }
 
 .quiz-thumbnail-row {
@@ -12,11 +13,11 @@
 }
 
 .recommended-quizzes .quiz-thumbnail {
-  max-height: 14rem;
+  max-height: 11rem;
 }
 
 .recommended-quizzes .quiz-title {
-  font-size: 1.6rem;
+  font-size: 1.3rem;
 }
 
 .quiz-info {
@@ -38,12 +39,12 @@
 }
 
 .quiz-profile-logo {
-  width: 2.5rem;
+  width: 2rem;
   border-radius: 50%;
 }
 
 .author-nick {
-  font-size: 1.2rem;
+  font-size: 1rem;
 }
 
 .quiz-time {
@@ -66,7 +67,7 @@
   font-weight: 700;
   margin-right: 0.5rem;
   color: var(--dark-cream);
-  font-size: 1.5rem;
+  font-size: 1.3rem;
 }
 
 .quiz-category {
@@ -76,10 +77,10 @@
 }
 
 .quiz-category-text {
-  font-size: 1.2rem;
+  font-size: 1rem;
 }
 
-.fa-gamepad {
+.quiz i {
   color: var(--dark-cream);
-  font-size: 1.5rem;
+  font-size: 1.3rem;
 }
