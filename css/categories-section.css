@@ -1,0 +1,32 @@
+.categories-section {
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.categories-container {
+  margin-top: 1rem;
+  display: flex;
+  gap: 2rem;
+  overflow: auto;
+}
+
+.category {
+  display: flex;
+  align-items: center;
+  background-color: var(--very-dark-blue);
+  padding: 0.5rem 1.5rem;
+  border-radius: 0.2rem;
+}
+
+.category-name {
+  font-weight: 700;
+  font-size: 1.5rem;
+  margin-left: 1rem;
+}
+
+.category > i {
+  font-size: 2rem;
+  color: var(--dark-cream);
+  left: 1rem;
+}

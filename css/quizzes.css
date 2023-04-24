@@ -61,8 +61,8 @@
   padding: 0.4rem 1rem;
   border-radius: 2rem;
   position: absolute;
-  right: 0.5rem;
-  bottom: 0.5rem;
+  left: 0.5rem;
+  top: 0.5rem;
 }
 
 .quiz-time-text {
@@ -95,25 +95,44 @@
 }
 
 .show-more-button {
-  border: 0.1rem solid var(--dark-cream);
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  justify-content: center;
+  border: 0.1rem solid rgba(204, 160, 83, 0.6);
   width: 100%;
   color: white;
   background-color: rgba(0, 0, 0, 0);
-  padding: 0.5rem 2rem;
+  padding: 0.2rem 2rem;
   font-size: 1.5rem;
   text-transform: uppercase;
   font-weight: 500;
   transition: background-color 0.15s ease-in-out;
 }
 
-.show-more-button:hover {
-  background-color: rgba(255, 255, 255, 0.15);
-}
-
 .show-more-button:active {
-  background-color: rgba(255, 255, 255, 0.2);
+  background-color: rgba(255, 255, 255, 0.15);
 }
 
 .hidden {
   display: none;
+}
+
+.recommended-quizzes .quiz-title {
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.8);
+  width: 100%;
+  text-align: center;
+  font-size: 1.1rem;
+  bottom: 0;
+  transition: border-bottom 0.1s ease-out;
+}
+
+@media (hover: hover) {
+  .recommended-quizzes .quiz:hover .quiz-title {
+    border-bottom: 0.2rem solid var(--dark-cream);
+  }
+  .show-more-button:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+  }
 }
