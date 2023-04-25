@@ -40,7 +40,6 @@
 
 .nav-category-list::-webkit-scrollbar {
   height: 0.4rem;
-  margin-top: 50rem;
 }
 
 .nav-category-list::-webkit-scrollbar-thumb {
