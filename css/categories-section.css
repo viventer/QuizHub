@@ -34,11 +34,6 @@
   left: 1rem;
 }
 
-.category:hover {
-  filter: brightness(140%);
-  cursor: pointer;
-}
-
 .categories-container::-webkit-scrollbar {
   height: 0.4rem;
 }
@@ -60,4 +55,15 @@
   .categories-container::-webkit-scrollbar {
     display: none;
   }
+}
+
+@media (hover: hover) {
+  .category:hover {
+    filter: brightness(140%);
+    cursor: pointer;
+  }
+}
+
+.category:active {
+  filter: brightness(170%);
 }
