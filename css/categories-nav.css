@@ -38,6 +38,10 @@
   border-bottom: 2px solid white;
 }
 
+.nav-category-button.active:focus {
+  outline: none;
+}
+
 .nav-category-list::-webkit-scrollbar {
   height: 0.4rem;
 }

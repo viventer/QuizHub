@@ -25,6 +25,10 @@ body {
   height: 3000px;
 }
 
+:focus-visible {
+  outline: 0.15rem solid white;
+}
+
 .flex-container {
   display: flex;
 }
@@ -68,6 +72,10 @@ html {
 
 ::-webkit-scrollbar-track {
   background: rgba(0, 0, 0, 0);
+}
+
+::selection {
+  background-color: rgba(77, 104, 155, 0.7);
 }
 
 /* https://coolors.co/palette/001219-005f73-0a9396-94d2bd-e9d8a6-ee9b00-ca6702-bb3e03-ae2012-9b2226 */
