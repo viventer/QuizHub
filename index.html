@@ -26,7 +26,7 @@
         <span class="blue">Q</span>uiz<span class="blue">H</span>ub
       </h1>
       <div class="search-bar-container">
-        <input type="text" class="search-bar">
+        <input type="text" class="search-bar" aria-label="search">
         <div class="search-icon-box">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50" fill="currentColor" class="search-icon">
             <g>
@@ -37,10 +37,10 @@
         </div>
       </div>
       <div class="header-buttons-container flex-container">
-        <button class="header-button create-quiz-button">
+        <button class="create-quiz-button header-button" aria-label="create quiz">
           <i class="icon-plus"></i>
         </button>
-        <button class="login-button header-button">LOGIN</button>
+        <button class="login-button header-button" aria-label="login">LOGIN</button>
       </div>
 
     </div>
@@ -796,30 +796,30 @@
         <h2>SZUKAJ W KATEGORIACH</h2>
       </header>
       <div class="categories-container">
-        <article class="category">
+        <button class="category">
           <i class="fa-solid fa-lightbulb"></i>
           <p class="category-name">Wszystkie</p>
-        </article>
-        <article class="category">
+        </button>
+        <button class="category">
           <i class="fa-solid fa-earth-americas"></i>
           <p class="category-name">Geografia</p>
-        </article>
-        <article class="category">
+        </button>
+        <button class="category">
           <i class="fa-regular fa-futbol"></i>
           <p class="category-name">Sport</p>
-        </article>
-        <article class="category">
+        </button>
+        <button class="category">
           <i class="fa-solid fa-computer"></i>
           <p class="category-name">Informatyka</p>
-        </article>
-        <article class="category">
+        </button>
+        <button class="category">
           <i class="fa-solid fa-code"></i>
           <p class="category-name">Programowanie</p>
-        </article>
-        <article class="category">
+        </button>
+        <button class="category">
           <i class="fa-solid fa-gamepad"></i>
           <p class="category-name">Gry</p>
-        </article>
+        </button>
       </div>
     </section>
   </main>

@@ -25,8 +25,10 @@ categoryButtons.forEach((button) =>
 );
 
 let leftButton = document.createElement("button");
+leftButton.setAttribute("aria-label", "login");
 leftButton.classList.add("left-quiz-button");
 let rightButton = document.createElement("button");
+rightButton.setAttribute("aria-label", "login");
 rightButton.classList.add("right-quiz-button");
 
 leftButton.addEventListener("click", () => {
